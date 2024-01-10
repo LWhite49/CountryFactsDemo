@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <head>
     <title>Guess That Country!!!</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Rubik+Maps&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <div class="parent-container">
-        <div class="left-parent-container">
-            <div class="website-title">
-                <p>Guess That Country!!!</p>
-            </div>
-            <div class="left-button-container">
-                <input type="text" placeholder="Enter a Country..." class="country-input-field"/>
-                <button class="submit-guess-button">Guess</button>
-            </div>
-            <div class="left-info-header-container">
-                <p class="guesses-display-header">Your Guesses:</p>
-                <p class="total-score-display">Score: 000</p>
-            </div>
-            <div class="left-info-container">
-                <div class="guesses-display">
-                    <p class="guesses-display-text">N/A</p>
-                    <p class="guesses-display-text">N/A</p>
-                    <p class="guesses-display-text">N/A</p>
+    <div class="center-div">
+        <div class="parent-container">
+            <div class="left-parent-container">
+                <div class="website-title-container">
+                    <p class="website-title">Guess That Country!</p>
                 </div>
-                <div class="current-score-display">
-                    <p class="current-score-display-text">10,000</p>
+                <div class="left-button-container">
+                    <input type="text" placeholder="Enter a Country..." class="country-input-field"/>
+                    <button class="submit-guess-button">Guess</button>
+                </div>
+                <div class="left-info-header-container">
+                    <p class="guesses-display-header">Your Guesses:</p>
+                    <p class="total-score-display">Score: <span--- class="score-styling">3,000</span></p>
+                </div>
+                <div class="left-info-container">
+                    <div class="guesses-display">
+                        <p class="guesses-display-text">Brazil</p>
+                        <p class="guesses-display-text">United States</p>
+                        <p class="guesses-display-text">Fiji</p>
+                    </div>
+                    <div class="current-score-display">
+                        <p class="current-score-display-text">Round 1: <span class="current-score-styling">10,000</span></p>
+                        <p class="current-score-display-text">Round 2: <span class="current-score-styling">10,000</span></p>
+                        <p class="current-score-display-text">Round 3: <span class="current-score-styling">10,000</span></p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="right-parent-container">
-            <div class="map-display-container">
-                <img src="../design/purple-map.jpg" class="map-display"/>
-            </div>
-            <div class="right-fact-header-display">
-                <p class="fact-header">In This Country...</p>
-            </div>
-            <div class="right-fact-display">
-                <p class="fact-display-text">This Country...</p>
-                <p class="fact-display-text">This Country Also...</p>
-            </div>
-            <div class="right-hint-button-container">
-                <button class="hint-button">Get Another Hint</button>
+            <div class="right-parent-container">
+                <div class="map-display-container">
+                    <img src="../design/purple-map.jpg" class="map-display"/>
+                </div>
+                <div class="right-fact-header-display">
+                    <p class="fact-header">In This Country...</p>
+                </div>
+                <div class="right-fact-display">
+                    <p class="fact-display-text">This Country...</p>
+                    <p class="fact-display-text">This Country Also...</p>
+                </div>
+                <div class="right-hint-button-container">
+                    <button class="hint-button">Get Another Hint</button>
+                </div>
             </div>
         </div>
     </div>

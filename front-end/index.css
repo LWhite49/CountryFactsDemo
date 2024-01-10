@@ -1,0 +1,146 @@
+body{
+    margin: none;
+    padding: none;
+    background-image: radial-gradient(closest-side, #852cd3, #944bde, #a46be9, #b58cf4, #c5adf9);
+}
+.center-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent-container{
+    margin-top: 8vh;
+    padding: 2vh 1vw;
+    width: clamp(1200px, 80%, 1800px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-width: 6px;
+    border-style:dotted;
+    border-radius: 20px;
+    border-color: black;
+}
+.left-parent-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 60%;
+    padding-left: 1vw;
+}
+.website-title-container{
+    border-bottom: 2px solid rgb(222, 201, 226);
+    width: 70%;
+    height: 10%;
+}
+.website-title{
+    font-family: "DM Serif Display", serif;
+    font-size: 32pt;
+    color: rgb(77, 49, 82);
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 20px;
+}
+.left-button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:30px;
+    width: 70%;
+    height: 14%;
+    margin-top: 1.2%;
+}
+.country-input-field{
+    font-size:22pt;
+    font-family: "DM Serif Display";
+    padding: 3px 0px 3px 10px;
+    border-radius: 14px;
+    background-color: #9277b0;
+    border-color: black;
+    color: rgb(77, 49, 82);
+}
+.country-input-field:focus{
+    outline:none;
+    border-color: rgb(77, 49, 82);
+}
+.submit-guess-button{
+    font-size: 18pt;
+    font-family: "DM Serif Display";
+    border-radius: 14px;
+    background-color: #9277b0;
+    border-color: black;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+.left-info-header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    width: 70%;
+    height: 13%;
+    margin-top: 1.2%;
+    border-bottom: 2px solid rgb(222, 201, 226);
+
+}
+.guesses-display-header, .total-score-display{
+    font-family: "DM Serif Display";
+    font-size: 22pt;
+    color: rgb(77, 49, 82);
+    margin: 0px;
+    padding: 0px;
+}
+.guesses-display-header{
+    position:relative;
+    top: 3px;
+}   
+.total-score-display{
+    position:relative;
+    right: 100px;
+}
+.score-styling{
+    font-size: 28pt;
+    font-weight: 600;
+    color: #dec9e2;
+}
+.left-info-container{
+    display: flex;
+    width: 70%;
+    margin-top: 2%;
+}
+.guesses-display{
+    width: 56%;
+    height: 100%;
+    border-right: 2px dashed rgb(222, 201, 226);
+}
+.guesses-display-text{
+    font-family: "DM Serif Display";
+    font-size: 18pt;
+    color: rgb(77, 49, 82);
+    margin: 0px;
+    padding: 0px;
+}
+.current-score-display{
+    width: 44%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.current-score-display-text{
+    font-family: "DM Serif Display";
+    font-size: 18pt;
+    color: rgb(77, 49, 82);
+    margin: 0px;
+    padding: 0px;
+}
+.current-score-styling{
+    color: #dec9e2;
+}
+.right-parent-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 40%;
+}

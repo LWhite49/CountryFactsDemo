@@ -1,0 +1,19 @@
+{
+  "name": "countryfactsdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "CountryScraper.js",
+  "scripts": {
+    "start": "node CountryScraper.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "puppeteer": "^21.7.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}

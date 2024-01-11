@@ -3,12 +3,13 @@ import {CountryData} from './countryData.js';
 const countryInputElem = document.querySelector(".country-input-field");
 const guessButtonElem = document.querySelector(".submit-guess-button");
 const hintButtonElem = document.querySelector(".hint-button");
+const giveUpButtonElem = document.querySelector(".give-up-button");
 /* Import relevant HTML elements for updating */
 const totalScoreElem = document.querySelector(".score-styling");
 const countryListElem = document.querySelector(".guesses-display");
 const scoreListElem = document.querySelector(".current-score-display");
 const hintListElem = document.querySelector(".right-fact-display");
-
+const errorElem = document.querySelector(".error-text");
 /* Initialize lists for HTML generation */
 let guessedList = [];
 let scoreList = [10000];
@@ -19,6 +20,7 @@ let hintCount = 3;
 let currentCountry = null;
 const countryData = CountryData;
 const countryNames = countryData.map((country) => country["Name"]);
+
 
 /* Function for updating HTML by generating it referencing guessedList & hintList */
 const renderLists = () => {
@@ -71,8 +73,17 @@ const submitGuess = () => {
     /* If guess is not a country */
     if (!countryNames.includes(guess.toLowerCase())) {
         countryInputElem.value = '';
+        errorElem.innerHTML = "Not Found in Database.";
         return;
     }
+    /* If guess has been guessed already */
+    if (guessedList.includes(guess)) {
+        countryInputElem.value = '';
+        errorElem.innerHTML = "Already Guessed.";
+        return;
+    }
+    /* Remove error if guess is valid */
+    errorElem.innerHTML = "";
     /* If correct */
     if (guess.toLowerCase().localeCompare(currentCountry["Name"]) == 0) {
         countryInputElem.value = '';
@@ -81,7 +92,8 @@ const submitGuess = () => {
     /* If incorrect */
     else {
         /* Update score */
-        scoreList[scoreList.length - 1] -= 1000;
+        if (scoreList[scoreList.length - 1] > 0) {scoreList[scoreList.length - 1] -= 1000;}
+        if (scoreList[scoreList.length - 1] < 0) {scoreList[scoreList.length - 1] = 0;}
         countryInputElem.value = '';
         guessedList.push(guess);
         /* Update HTML */
@@ -93,15 +105,21 @@ const submitGuess = () => {
 const getHint = () => {
     if (hintCount < hintList.length) {
         hintCount++;
-        scoreList[scoreList.length - 1] -= 250;
+        if (scoreList[scoreList.length - 1] > 0) { scoreList[scoreList.length - 1] -= 500; }
         renderLists();
     }
     else {hintButtonElem.innerHTML = "Out Of Hints!";}
 }
 
+/* Event listener for give up button */
+const giveUp = () => {
+    scoreList[scoreList.length - 1] = 0;
+    startNewRound();
+}
 
 /* Apply listeners to relevant HTML elements */
 guessButtonElem.addEventListener("click", submitGuess);
 countryInputElem.addEventListener("keyup", (event) => { if (event.keyCode === 13) { submitGuess(); } });
 hintButtonElem.addEventListener("click", getHint);
+giveUpButtonElem.addEventListener("click", giveUp);
 startNewRound();

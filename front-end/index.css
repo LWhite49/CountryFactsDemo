@@ -73,6 +73,21 @@ body{
     padding: 4px 12px;
     cursor: pointer;
 }
+.left-error-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 4%;
+}
+.error-text{
+    display: inline-block;
+    font-size: 14pt;
+    font-family: "DM Serif Display";
+    color: rgb(246, 161, 161);
+    position:relative;
+    right: 120px;
+}
 .left-info-header-container{
     display: flex;
     flex-direction: row;
@@ -192,8 +207,9 @@ body{
     justify-content: center;
     align-items: center;
     height: 10%;
+    gap: 16px;
 }
-.hint-button{
+.hint-button, .give-up-button{
     font-size: 18pt;
     font-family: "DM Serif Display";
     border-radius: 14px;

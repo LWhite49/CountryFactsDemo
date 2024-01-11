@@ -13,6 +13,7 @@ const errorElem = document.querySelector(".error-text");
 /* Initialize lists for HTML generation */
 let guessedList = [];
 let scoreList = [10000];
+let countryList = [];
 let hintList = [];
 let totalScore = 0;
 let roundCount = 0;
@@ -32,7 +33,8 @@ const renderLists = () => {
     countryListElem.innerHTML = putStr;
     /* Update scoreList */
     putStr = '';
-    for (let i = 0; i < scoreList.length; i++) { putStr += `<p class="current-score-display-text">Round ${i+1}: <span class="current-score-styling">${scoreList[i]}</span></p>`; }
+    for (let i = 0; i < scoreList.length - 1; i++) { putStr += `<p class="current-score-display-text">Round ${i+1}: <span class="current-score-styling">${scoreList[i]} - ${countryList[i].toUpperCase()}</span></p>`; }
+    putStr += `<p class="current-score-display-text">Round ${scoreList.length}: <span class="current-score-styling">${scoreList[scoreList.length - 1]}</span></p>`;
     scoreListElem.innerHTML = putStr;
     /* Update hintList */
     putStr = '';
@@ -45,6 +47,7 @@ const startNewRound = () => {
     if (roundCount > 0) { 
         totalScore += scoreList[scoreList.length - 1];
         scoreList.push(10000);
+        countryList.push(currentCountry["Name"]);
     }
     /* Update global variables */
     roundCount++;

@@ -21,7 +21,6 @@ export const CountryData = [
       "Largest city": "New York City",
       "Official languages": "None at the federal level",
       "National language": "English",
-      "Ethnic groups": "By race:",
       "Religion": "70% Christianity",
       "Government": "Federal presidential constitutional republic",
       "Legislature": "Congress",

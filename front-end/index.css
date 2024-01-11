@@ -11,7 +11,7 @@ body{
 .parent-container{
     margin-top: 8vh;
     padding: 2vh 1vw;
-    width: clamp(1200px, 80%, 1800px);
+    width: clamp(1200px, 80%, 1860px);
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -31,6 +31,7 @@ body{
     border-bottom: 2px solid rgb(222, 201, 226);
     width: 70%;
     height: 10%;
+    padding-bottom: 30px;
 }
 .website-title{
     font-family: "DM Serif Display", serif;
@@ -103,6 +104,9 @@ body{
     font-size: 28pt;
     font-weight: 600;
     color: #dec9e2;
+    padding-left: 4px;
+    position: relative;
+    top: 2px;
 }
 .left-info-container{
     display: flex;
@@ -143,4 +147,61 @@ body{
     flex-direction: column;
     justify-content: flex-start;
     width: 40%;
+    padding-right: 1vw;
 }
+.map-display-container{
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    max-height: 300px;
+}
+.map-display{
+    display: block;
+    border-radius: 40px;
+    height: 90%;
+    max-height: 240px;
+}
+.right-fact-header-display{
+    display: flex;
+    justify-content: start;
+    border-bottom: #dec9e2 2px solid;
+}
+.fact-header{
+    padding-left: 20px;
+    font-family: "DM Serif Display";
+    font-size: 28pt;
+    color: #dec9e2;
+    margin: 0px;
+}
+.right-fact-display{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 50%;
+    padding-left: 30px;
+}
+.fact-display-text{
+    font-family: "DM Serif Display";
+    font-size: 18pt;
+    color: rgb(77, 49, 82);
+    margin: 0px;
+    padding: 0px;
+}
+.right-hint-button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+}
+.hint-button{
+    font-size: 18pt;
+    font-family: "DM Serif Display";
+    border-radius: 14px;
+    background-color: #9277b0;
+    border-color: black;
+    padding: 4px 12px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+

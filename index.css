@@ -1,7 +1,7 @@
 body{
     margin: none;
     padding: none;
-    background-image: radial-gradient(closest-side, #852cd3, #944bde, #a46be9, #b58cf4, #c5adf9);
+    background-image: radial-gradient(circle, #c5adf9,#b58cf4,#a46be9,#944bde,#852cd3);
 }
 .center-div{
     display: flex;
@@ -15,10 +15,6 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    border-width: 6px;
-    border-style:double;
-    border-radius: 20px;
-    border-color: black;
 }
 .left-parent-container{
     display: flex;
@@ -28,18 +24,19 @@ body{
     padding-left: 1vw;
 }
 .website-title-container{
-    border-bottom: 2px solid rgb(222, 201, 226);
+    border-bottom: 3px solid #DEE3E0;
     width: 70%;
     height: 10%;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 .website-title{
-    font-family: "DM Serif Display", serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
     font-size: 32pt;
-    color: rgb(77, 49, 82);
+    color: #150821;
     margin: 0px;
     padding: 0px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 .left-button-container{
     display: flex;
@@ -53,10 +50,10 @@ body{
 }
 .country-input-field{
     font-size:22pt;
-    font-family: "DM Serif Display";
+    font-family: 'Raleway', sans-serif;
     padding: 3px 0px 3px 10px;
     border-radius: 14px;
-    background-color: #9277b0;
+    background-color: #C9CFCC;
     border-color: black;
     color: rgb(77, 49, 82);
 }
@@ -66,10 +63,11 @@ body{
 }
 .submit-guess-button{
     font-size: 18pt;
-    font-family: "DM Serif Display";
+    font-family: 'Raleway', sans-serif;
     border-radius: 14px;
-    background-color: #9277b0;
+    background-color: #C9CFCC;
     border-color: black;
+    color: #150821;
     padding: 4px 12px;
     cursor: pointer;
 }
@@ -83,7 +81,7 @@ body{
 .error-text{
     display: inline-block;
     font-size: 14pt;
-    font-family: "DM Serif Display";
+    font-family: 'Raleway', sans-serif;
     color: rgb(246, 161, 161);
     position:relative;
     right: 120px;
@@ -97,13 +95,13 @@ body{
     width: 70%;
     height: 13%;
     margin-top: 1.2%;
-    border-bottom: 2px solid rgb(222, 201, 226);
+    border-bottom: 3px solid #DEE3E0;
 
 }
 .guesses-display-header, .total-score-display{
-    font-family: "DM Serif Display";
+    font-family: 'Raleway', sans-serif;
     font-size: 22pt;
-    color: rgb(77, 49, 82);
+    color: #150821;
     margin: 0px;
     padding: 0px;
 }
@@ -118,7 +116,7 @@ body{
 .score-styling{
     font-size: 28pt;
     font-weight: 600;
-    color: #dec9e2;
+    color: #f9faf2;
     padding-left: 4px;
     position: relative;
     top: 2px;
@@ -131,12 +129,12 @@ body{
 .guesses-display{
     width: 56%;
     height: 100%;
-    border-right: 2px dashed rgb(222, 201, 226);
+    border-right: 3px dashed #DEE3E0;
 }
 .guesses-display-text{
-    font-family: "DM Serif Display";
+    font-family: 'Raleway', sans-serif;
     font-size: 18pt;
-    color: rgb(77, 49, 82);
+    color: #150821;
     margin: 0px;
     padding: 0px;
 }
@@ -148,15 +146,16 @@ body{
     align-items: flex-start;
 }
 .current-score-display-text{
-    font-family: "DM Serif Display";
+    font-family: 'Raleway', sans-serif;
     font-size: 18pt;
-    color: rgb(77, 49, 82);
+    color: #150821;
     margin: 0px;
     padding: 0px;
     padding-left: 6px;
 }
 .current-score-styling{
-    color: #dec9e2;
+    color: #f9faf2;
+    white-space: nowrap;
 }
 .right-parent-container{
     display: flex;
@@ -180,13 +179,14 @@ body{
 .right-fact-header-display{
     display: flex;
     justify-content: start;
-    border-bottom: #dec9e2 2px solid;
+    border-bottom: #DEE3E0 3px solid;
+    margin-bottom: 18px;
 }
 .fact-header{
     padding-left: 20px;
-    font-family: "DM Serif Display";
+    font-family: 'Raleway', sans-serif;
     font-size: 28pt;
-    color: #dec9e2;
+    color: #150821;
     margin: 0px;
 }
 .right-fact-display{
@@ -195,11 +195,12 @@ body{
     align-items: flex-start;
     height: 50%;
     padding-left: 30px;
+    gap: 4px;
 }
 .fact-display-text{
-    font-family: "DM Serif Display";
+    font-family: 'Raleway', sans-serif;
     font-size: 18pt;
-    color: rgb(77, 49, 82);
+    color: #150821;
     margin: 0px;
     padding: 0px;
 }
@@ -212,20 +213,12 @@ body{
 }
 .hint-button, .give-up-button{
     font-size: 18pt;
-    font-family: "DM Serif Display";
+    font-family: 'Raleway', sans-serif;
     border-radius: 14px;
-    background-color: #9277b0;
+    background-color: #C9CFCC;
     border-color: black;
+    color: #150821;
     padding: 4px 12px;
     margin-top: 20px;
     cursor: pointer;
-}
-.notes-footer{
-    position:fixed;
-    left: 0px;
-    right:0px;
-    bottom: 0px;
-    height: 5vw;
-    z-index: 10;
-    background-color: #852cd3;
 }

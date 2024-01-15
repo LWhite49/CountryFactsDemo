@@ -11,6 +11,8 @@ body{
 .parent-container{
     margin-top: 8vh;
     padding: 2vh 1vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
     width: clamp(1200px, 80%, 1860px);
     display: flex;
     flex-direction: row;
@@ -37,6 +39,7 @@ body{
     margin: 0px;
     padding: 0px;
     padding-bottom: 10px;
+    white-space: nowrap;
 }
 .left-button-container{
     display: flex;
@@ -221,4 +224,67 @@ body{
     padding: 4px 12px;
     margin-top: 20px;
     cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .parent-container{
+        position: relative;
+        left: 50px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .parent-container{
+        position: relative;
+        left: 100px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .parent-container{
+        position: relative;
+        left: 150px;
+    }
+}
+
+@media (max-width: 900px) {
+    .parent-container{
+        position: relative;
+        left: 200px;
+    }
+}
+
+@media (max-width: 800px) {
+    .parent-container{
+        position: relative;
+        left: 250px;
+    }
+}
+
+@media (max-width: 700px) {
+    .parent-container{
+        position: relative;
+        left: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .parent-container{
+        position: relative;
+        left: 350px;
+    }
+}
+
+@media (max-width: 500px) {
+    .parent-container{
+        position: relative;
+        left: 400px;
+    }
+}
+
+@media (max-width: 400px) {
+    .parent-container{
+        position: relative;
+        left: 450px;
+    }
 }

@@ -1874,7 +1874,6 @@ export const CountryData = [
       "Mains electricity": "230 V–50 Hz",
       "Driving side": "right",
       "Calling code": "+45",
-      "Website": "denmark.dk",
       "Name": "denmark"
     },
     {

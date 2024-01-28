@@ -4,7 +4,7 @@
 
 This project was made in just two days as the first test for 48hr.dev. As such, its functionality was prioritized over styling. It references a scraed data base of
 Country Facts, and displays them one at a time until a user is able to guess which country the facts are based on, tracking their score based on the number of incorrect
-guesses and hints needed. It uses NodeJS and puppeteer for scraping, and static HTML CSS and JS for the frontend.
+guesses and hints needed. It uses NodeJS and puppeteer for scraping, and static HTML CSS and JS for the frontend. 
 
 # "Hackathon" format tradeoffs
 
